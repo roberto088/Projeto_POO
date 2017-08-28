@@ -1,21 +1,22 @@
 
-public class Endereco extends Cliente{
+public class Endereco {
 
 	private String rua, bairro, cidade, complemento, pontoRef;
 	private int numCasa, cep, fone;
 	
 	public Endereco(String rua, String bairro, String cidade,
 			String complemento, String pontoRef, int numCasa, int cep, int fone) {
-		this.rua = null;
-		this.bairro = null;
-		this.cidade = null;
-		this.complemento = null;
-		this.pontoRef = null;
-		this.numCasa = 0;
-		this.cep = 00000-000;
-		this.fone = 0;
+		super();
+		this.rua = rua;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.complemento = complemento;
+		this.pontoRef = pontoRef;
+		this.numCasa = numCasa;
+		this.cep = cep;
+		this.fone = fone;
 	}
-	
+
 	public String getRua() {
 		return rua;
 	}
@@ -80,6 +81,13 @@ public class Endereco extends Cliente{
 		this.fone = fone;
 	}
 
+	public String toString() {
+		return "Endereco [rua=" + rua + ", bairro=" + bairro + ", cidade="
+				+ cidade + ", complemento=" + complemento + ", pontoRef="
+				+ pontoRef + ", numCasa=" + numCasa + ", cep=" + cep
+				+ ", fone=" + fone + "]";
+	}
+
 	public void cadastrarEndereco(){
 		
 	}
@@ -88,9 +96,7 @@ public class Endereco extends Cliente{
 		
 	}
 	
-	public void cancelarEndereco(){
+	public void excluirEndereco(){
 		
 	}
-	
-	
 }

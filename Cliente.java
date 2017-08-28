@@ -1,38 +1,58 @@
 
-public abstract class Cliente {
+public class Cliente extends Pessoa{
 
-	protected String nome, endereco;
+	int id_cliente;
+	String tipoPlano;
+	
+	public Cliente(int idade, int rg, int cpf, String sexo, int id_cliente,
+			String tipoPlano) {
+		super(idade, rg, cpf, sexo);
+		this.id_cliente = id_cliente;
+		this.tipoPlano = tipoPlano;
+	}
 	
 	
-	public Cliente(String nome, String endereco) {
-		super();
-		this.nome = nome;
-		this.endereco = endereco;
-	}
-	
-	public String getNome() {
-		return nome;
+
+	public int getId_cliente() {
+		return id_cliente;
 	}
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setId_cliente(int id_cliente) {
+		this.id_cliente = id_cliente;
 	}
 
 
-	public String getEndereco() {
-		return endereco;
+
+	public String getTipoPlano() {
+		return tipoPlano;
 	}
 
 
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+
+	public void setTipoPlano(String tipoPlano) {
+		this.tipoPlano = tipoPlano;
 	}
+
+
 
 	public String toString() {
-		return "Cliente [nome=" + nome + ", endereco=" + endereco + "]";
+		return "Cliente [id_cliente=" + id_cliente + ", tipoPlano=" + tipoPlano
+				+ "]";
 	}
 
+
+
+	public void criarOrdem(){
+		
+	}
+
+	public void fecharOrdem(){
+		
+	}
 	
-	
+	public void cancelarOrdem(){
+		
+	}
 }
